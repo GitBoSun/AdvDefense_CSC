@@ -1,5 +1,6 @@
 # AdvDefense_CSC
 Code for [Adversarial Defense by Stratiﬁed Convolutional Sparse Coding](https://arxiv.org/pdf/1812.00037.pdf).
+
 This is an attack-agnostic adversarial defense based on input transformation. After getting adversarial examples from threaten model, we reconstruct adversarial images (optional: and clean images) with convolutional sparse coding to remove adversarial noise. After reconstruction, adversairal examples are projected to a quai-natural space wehere they share close perceptual features and network capturing features. 
 ![pipeline](https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/pipeline.pdf)
 ## Requirements
@@ -14,12 +15,12 @@ We first train a Denosing Autoencoder with (64,64) natural images. Then we split
 Given a folder with images, it reconstruct those images to another folder with the same image names. 
 You need to specify te input path, output path and basis path in this python script. 
 example: 
-'''
+```
 python recons_data.py 64 8 0.2 32
-'''
+```
 ### basis
 It saves some pre-learned filter basis from natural images. In this folder, we have basis for cifar, Imagenet(in resolution 224 and 64). In each subfoler, we have basis with different sparse coefficients. 
-'''64_p8_lm0.2.npy''' means this basis have 64 filters with size (8, 8) and it's learned under the sparse coefficient 0.2. 
+```64_p8_lm0.2.npy``` means this basis have 64 filters with size (8, 8) and it's learned under the sparse coefficient 0.2. 
 ## Results
 ### CIFAR-10
 ![](https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/cifar_compare.pdf)
