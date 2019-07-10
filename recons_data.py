@@ -13,14 +13,15 @@ import multiprocessing
 from multiprocessing import Pool
 
 K = int(sys.argv[1]) # filter number, 64
-IM_SIZE = int(sys.argv[4])
 PATCH_SIZE = int(sys.argv[2]) # filter size, 8
+lmbda = float(sys.argv[3]) # sparse coefficient, 0.1 to 0.3 is good, we usually use 
+IM_SIZE = int(sys.argv[4])
 P = PATCH_SIZE
 npd = 16
 fltlmbd = 5
-lmbda = float(sys.argv[3]) # sparse coefficient, 0.1 to 0.3 is good
 dic_path = 'basis_{}/{}_p{}_lm{}.npy'.format(IM_SIZE, K, P, lmbda)
-im_path = '224_res50/{}'.format(adv_type)
+# you need to specify the input path(im_path) and output path(out_path)
+im_path = '224_res50/{}'.format(adv_type) 
 out_path = '224_tmp'
 basis = np.load(dic_path)
 if not os.path.exists(out_path):
@@ -52,7 +53,7 @@ def recons(name):
 if __name__=="__main__":
   names = sorted(os.listdir(im_path))  
   print(len(names))
-  pool = Pool(1)
+  pool = Pool(1) #chage number of processings
   rl =pool.map(recons, names)
   pool.close()
 
