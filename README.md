@@ -23,8 +23,8 @@ It saves some pre-learned filter basis from natural images. In this folder, we h
 ```64_p8_lm0.2.npy``` means this basis have 64 filters with size (8, 8) and it's learned under the sparse coefficient 0.2. 
 ## Results
 ### CIFAR-10
-![](https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/cifar_compare.png)
+![cifar](https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/cifar_compare.png)
 ### ImageNet
-![](https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/imagenet_compare.png)
+![imagenet](https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/imagenet_compare.png)
 
 
