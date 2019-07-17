@@ -7,7 +7,7 @@ This is an attack-agnostic adversarial defense based on input transformation. Af
 	<p align="center">
 		<em>pipeline</em>
 	</p>
-</p>
+
 ## Requirements
 You need to install [sporco](https://github.com/bwohlberg/sporco) to operate convolutional sparse coding, 
 ## Defense Process
