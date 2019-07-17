@@ -2,7 +2,12 @@
 Code for [Adversarial Defense by Stratiﬁed Convolutional Sparse Coding](https://arxiv.org/pdf/1812.00037.pdf).
 
 This is an attack-agnostic adversarial defense based on input transformation. After getting adversarial examples from threaten model, we reconstruct adversarial images (optional: and clean images) with convolutional sparse coding to remove adversarial noise. After reconstruction, adversairal examples are projected to a quai-natural space wehere they share close perceptual features and network capturing features. 
-![pipeline](https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/pipeline.png)
+<p align="center">
+	<img src="https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/pipeline.png" alt="Sample"  width="250" height="140">
+	<p align="center">
+		<em>pipeline</em>
+	</p>
+</p>
 ## Requirements
 You need to install [sporco](https://github.com/bwohlberg/sporco) to operate convolutional sparse coding, 
 ## Defense Process
@@ -23,8 +28,19 @@ It saves some pre-learned filter basis from natural images. In this folder, we h
 ```64_p8_lm0.2.npy``` means this basis have 64 filters with size (8, 8) and it's learned under the sparse coefficient 0.2. 
 ## Results
 ### CIFAR-10
-![cifar](https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/cifar_compare.png)
+<p align="center">
+	<img src="https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/cifar_compare.png"  width="250" height="140">
+	<p align="center">
+		<em>cifar</em>
+	</p>
+</p>
+
 ### ImageNet
-![imagenet](https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/imagenet_compare.png)
+<p align="center">
+	<img src="https://github.com/GitBoSun/AdvDefense_CSC/blob/master/images/imagenet_compare.png"  width="250" height="140">
+	<p align="center">
+		<em>imagenet</em>
+	</p>
+</p>
 
 
