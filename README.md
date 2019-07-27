@@ -17,7 +17,7 @@ Here we don't use DAE to find a cluster that input image belongs to. After learn
 We first train a Denosing Autoencoder with (64,64) natural images. Then we split all images to several clusters based on DAE latent features and learn a filter basis for each cluster. For each input image, we first resize it to (64, 64) and feed it to DAE to find the cluster its latent feature belongs to. Then we reconstruct the input with basis of its cluster. 
 ## Usage
 ### recons_data.py
-Given a folder with images, it reconstruct those images to another folder with the same image names. 
+Given a folder with images, it reconstructs those images to another folder with the same image names. 
 You need to specify te input path, output path and basis path in this python script. 
 example: 
 ```
